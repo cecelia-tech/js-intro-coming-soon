@@ -81,3 +81,207 @@ const kiti1 = ['Im', 'in', 'love', 'with', 'you'];
 console.log(kiti1);
 const kitiKartu = kiti + ', ' + kiti1;
 console.log(kitiKartu);
+
+console.log('-----if, if else, if else if---');
+
+if (pirmas > antras) {
+    const ats = 'Pomidoras';
+    console.log(ats);
+    
+}
+if (pirmas < antras) {
+    const ats1 = 'Pomidoras';
+    console.log(ats1);
+} else { const ats2 = 'Bandykite dar karta!';
+    console.log(ats2);
+}
+if (pirmas === antras) {
+    const ats2 = 'Pomidoras';
+    console.log(ats2);
+} else {
+    const ats3 = 'Bandykite dar karta';
+    console.log(ats3);
+}
+if (pirmas !== antras) {
+    const nelygus = 'Pomidoras';
+    console.log(nelygus);
+} else { const nelygus1 = 'Bandykite dar karta';
+    console.log(nelygus1);
+}
+if (pirmas >= antras) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (pirmas <= antras) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+console.log('--teksto kintamuju ilgiai--');
+
+const pavasaris = 'Pavasaris';
+const pavasarisIlgis = pavasaris.length;
+console.log(pavasarisIlgis);
+
+const vasara = 'Vasara';
+const vasaraIlgis = vasara.length;
+console.log(vasaraIlgis);
+
+if (pavasarisIlgis > vasaraIlgis) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta.');
+}
+if (pavasarisIlgis < vasaraIlgis) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (pavasarisIlgis === vasaraIlgis) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (pavasarisIlgis !== vasaraIlgis) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (pavasarisIlgis >= vasaraIlgis) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (pavasarisIlgis <= vasaraIlgis) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+
+console.log('--saraso kintamuju ilgiai--');
+
+const sarasoIlgis = [3, 6, 8, 1, 0, 4, 2, 7];
+console.log(sarasoIlgis.length);
+const sarasoIlgis1 = [5, 8, 1, 0];
+console.log(sarasoIlgis1.length);
+
+if (sarasoIlgis.length > sarasoIlgis1.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (sarasoIlgis.length < sarasoIlgis1.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (sarasoIlgis.length === sarasoIlgis1.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (sarasoIlgis.length !== sarasoIlgis1.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (sarasoIlgis.length >= sarasoIlgis1.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+if (sarasoIlgis.length <= sarasoIlgis1.length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar karta');
+}
+
+
+console.log('---- papildomai----');
+
+/* 
+pasiimti, kai:
+- laike šviečia / nešviečia saulė
+- lyja / nelyja
+- stovi vilkas / jo nėra
+*/
+
+const oras = 'pavasaris';
+
+if (oras === 'sviecia saule') {
+    console.log('krema nuo saules');
+} else if (oras === 'apsiniauke') {
+    console.log('megztini');
+} else if (oras === 'lyja') {
+    console.log('sketi');
+} else if (oras === 'sninga') {
+    console.log('palta');
+} else {
+    console.log('Ar tikrai matei, koks oras?');
+}
+
+const gele = 'gvazdikas';
+switch (gele) {
+    case 'roze':
+    console.log('meiles gele');
+    break;
+    case 'tulpe':
+    console.log('moters dienos gele');
+    break;
+    case 'gvazdikas':
+    console.log('draugyste');
+    break;
+    default:
+    console.log('tokios geles nezinau');
+    break;
+}
+
+const baldas = 'hfg';
+switch (baldas) {
+    case 'kede':
+    case 'stalas':
+    case 'lova':
+    case 'spinta':
+        console.log('gali nusipirkti');
+        break;
+    case 'kate':
+    default: console.log('ne baldas');
+        break;
+}
+
+const ranka = 'desiniarankis';
+if (ranka === 'desiniarankis') {
+    console.log('tuomet puiku');
+}
+
+const ranka2 = 'desine';
+if (ranka2 === 'desine') {
+    console.log('tau pasiseke');
+} else {
+    console.log('tada tu kairiarankis');
+}
+
+const ranka3 = 'desine ranka';
+if (ranka3 === 'desine ranka') {
+    console.log('tau pasiseke');
+} else if (ranka3 === 'kaire ranka') {
+    console.log('irgi gerai');
+} else { console.log('ar turi rankas?');}
+
+const cookiesAgreed = true;
+if (cookiesAgreed) {
+    console.log('proceed to the website');
+} if(!cookiesAgreed) {
+    console.log('sutikti su cookies');
+}
+
+const age = 21;
+const beverage = (age >=21) ? 'Vine': 'Soft drink';
+console.log(beverage);
+
+for (I=0; I<=15; I++)
+{if (I== 10) continue;
+console.log('I=' + I + "<BR>");}
+
+console.log('\u{1F600}');
