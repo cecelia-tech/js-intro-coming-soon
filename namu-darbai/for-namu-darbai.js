@@ -101,8 +101,8 @@ console.log(sum11);
 
 console.log('---integer---');
 
-const skaicius = 7;
-let kintamasis = 0;
+const skaicius = 0;
+let kintamasis = 11;
 for (i=8; i<=31; i++) {
 kintamasis = i% skaicius;
 if (kintamasis === 0) {

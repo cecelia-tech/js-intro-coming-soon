@@ -1,9 +1,9 @@
 /* 
 Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.
 */
-const nuo = 0;
-const iki = 11;
-const daliklis = 3;
+const nuo = -18;
+const iki = -18;
+const daliklis = 7;
 let kiekis = 0;
 
 for (let i = nuo; i <=iki; i++){
