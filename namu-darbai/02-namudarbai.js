@@ -285,3 +285,14 @@ for (I=0; I<=15; I++)
 console.log('I=' + I + "<BR>");}
 
 console.log('\u{1F600}');
+
+console.log('----March 15-----');
+
+const intervalas = [0, 1, 2, 3, 4];
+let sum = 0;
+
+for (i=0; i<=intervalas.length; i++) {
+const intervaloSkaicius = intervalas[i];
+sum += intervaloSkaicius;
+console.log(sum);
+}
