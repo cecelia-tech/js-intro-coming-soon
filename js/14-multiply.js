@@ -11,6 +11,13 @@ if (b === Infinity ){return 'Antrasis parametras turi buti normalus skaicius.'};
 if (a === - Infinity ){return 'Antrasis parametras turi buti normalus skaicius.'};
 if (b === - Infinity ){return 'Antrasis parametras turi buti normalus skaicius.'};
 
+//if (isNaN(a) || a === Infinity || a === - Infinity) { return `Pirmasis parametras turi buti normalus skaicius o ne ${a}.`}
+//if (!isFinite (a)) {return `Pirmasis parametras turi buti normalus skaicius o ne ${a}.`}
+
+    
+    
+
+
     // logika
     const rez = a * b;
     //rezultato grazinimas
