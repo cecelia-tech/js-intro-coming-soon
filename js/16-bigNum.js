@@ -14,9 +14,15 @@ function bigNum(list) {
     }
 //const max = Math.max(...list);
 
-let biggest = list[0];
-for (let i = 1; i<list.length; i++) {
+let biggest = -Infinity;
+for (let i = 0; i<list.length; i++) {
 const number = list [i];
+//ar tai normalus sk
+if (!isFinite(number)) {
+    continue;     //eina i sekancia operacija
+}
+//ar jis didesnis uz jau didziausia sk
+
 if (number > biggest) {
     biggest = number;
 }
@@ -48,6 +54,9 @@ console.log( bigNum( [ 69, 69, 69, 69, 66 ] ) );
 console.log( bigNum( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
 //rezultatas: Pateiktas sąrašas negali būti tuščias.
 
+console.log( bigNum( [ 8, -2, -3, -4, -5, Infinity ] ) );
+console.log( bigNum( [ Infinity, 8, -2, -3, -4, -5] ) );
+console.log( bigNum( [ '', 8, -2, -3, -4, -5 ] ) );
 
 
 console.log('------=======-------');
