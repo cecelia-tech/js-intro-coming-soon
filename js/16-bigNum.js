@@ -12,27 +12,27 @@ function bigNum(list) {
     if (list.length === 0) {
         return 'ERROR:  array is empty';
     }
-//const max = Math.max(...list);
+    //const max = Math.max(...list);
 
-let biggest = -Infinity;
-for (let i = 0; i<list.length; i++) {
-const number = list [i];
-//ar tai normalus sk
-if (!isFinite(number)) {
+    let biggest = -Infinity;
+    for (let i = 0; i<list.length; i++) {
+    const number = list [i];
+    //ar tai normalus sk
+    if (typeof number !== 0 || !isFinite(number)) {
     continue;     //eina i sekancia operacija
-}
-//ar jis didesnis uz jau didziausia sk
+    }
+    
+    //ar jis didesnis uz jau didziausia sk
 
-if (number > biggest) {
+    if (number > biggest) {
     biggest = number;
-}
-}
-// logika
+    }
+    // logika
 
-//result
+    //result
 
     return biggest;
-}
+}}
 
 console.log(bigNum('pomidoras'));
 console.log(bigNum(35474));
@@ -99,7 +99,7 @@ console.log(student['vardas']); //issitraukt is saraso
 console.log(student['tevai']['motina']);
 
 console.log('-----------');
-//supaprastinimas info istraukimas
+//supaprastinimas info istraukimas per taska
 console.log(student);
 console.log(student.vardas);
 console.log(student.tevai['motina']); */

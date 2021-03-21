@@ -11,7 +11,7 @@ function isrinktiRaides(tekstas, skaicius) {
     if (typeof skaicius !== 'number') {
         return 'Antrasis kintamasis yra netinkamo tipo.';
     }
-    if (skaicius === 0) {
+    if (skaicius === 0 || !isFinite(skaicius)) {
         return 'Antrasis kintamasis turi būti didesnis už nulį.'
     }
     if (tekstas.length < skaicius) {
@@ -34,5 +34,13 @@ console.log( isrinktiRaides( 'abc', 4 ), '->', 'ERROR' );
 
 console.log( isrinktiRaides( 'abcdefg', 2 ), '->', 'bdf' );
 console.log( isrinktiRaides( 'abcdefghijkl', 3 ), '->', 'cfil' );
+console.log( isrinktiRaides( '12345678910', 4 ), '->', '48' );
+console.log( isrinktiRaides( '12345678910', Infinity ), '->', 'Error' );
+console.log( isrinktiRaides( '12345678910', NaN ), '->', 'Error' );
+console.log( isrinktiRaides( true, NaN ), '->', 'Error' );
+console.log( isrinktiRaides( isrinktiRaides, NaN ), '->', 'Error' );
+console.log( isrinktiRaides( '[isrinktiRaides]', 3 ), '->', 'Error' );
+
+console.log('------=======------');
 
 
