@@ -30,17 +30,20 @@ for (let index = 0; index < list.length; index++) {
     console.log(item);
 }
 console.log('---------');
-//FOR=IN
-
+//FOR=IN - supaprastinta for versija
+//visada pradeda nuo 0 indekso; issirinkt reikiamus itemus
+//break ir continue veikia
 for (const index in list) {
     const item = list[index];
-    if (item>0) {
-        continue
+    if (item > 0) { //praleidzia sita skaiciu, jo neraso su continue
+        continue;
     }
     console.log(index);
 }
 console.log('--------');
 //for-of
+//jeigu nereikia indekso, o tik reiksmes
+//veikia continue ir break;
 for (const item of list) {
     if (item > 0) {
         continue;
@@ -50,6 +53,8 @@ for (const item of list) {
 
 console.log('--------');
 //WHILE
+
+//tas pats kaip for, bet priima break
 
 let randomNumber = 0;
 let randomNumberCount = 0;
@@ -69,9 +74,14 @@ while (index < list.length) {
     console.log(item);
     index++;
 }
+
+
+
+
 console.log('---------');
 //DO=WHILE, pirmiau daro, paskui klausia
-//break leidziamas
+//naudot kai norim padaryt bent karta, o ar galima daugiau, paaiskeja paskui
+//break leidziamas, continue nenaudot
 
 let dwi = 0;
 do {
@@ -164,3 +174,20 @@ const dictionary2 = ['Labas', 'rytas', 'Lietuva', 'sakau', 'tau'];
 
 const short = dictionary2.reduce((total, word) => total + word[0], '');
 console.log(short);
+
+console.log('***************');
+
+//!!SORT!!   !!SORT!!   !!SORT!!   !!SORT!!   
+// viska isrikiuot abeceles tvarka, o ne didesnis - mazesnis skaicius
+//gerai tinka sortint zodziams, didziosios visada priekyje
+const sortList = [1, -5, 78, 2, 11, -14, 0, -8];
+const sorted = sortList.sort((a, b)=> b-a); //mazejimo tvarka
+//const sorted = sortList.sort((a, b)=> a-b); => didejimo tvarka
+console.log(sorted);
+
+const abc2 = ['d', 'a', 'u', 'p'] 
+const sortedAbc = abc2.sort();
+console.log(sortedAbc);
+
+console.log('-------');
+
