@@ -17,7 +17,7 @@ function didziausiasSkaiciusSarase(skaiciai) {
         
         if (didziausias < number) {antrasDidziausias = didziausias;
         didziausias = number;} 
-        else if (antrasDidziausias <= number) {
+        else if (antrasDidziausias < number && number < didziausias ) {
             antrasDidziausias = number;
         }
 
@@ -31,7 +31,7 @@ function didziausiasSkaiciusSarase(skaiciai) {
             return 'ERROR: nera normalaus skaiciaus';
         }
     //result
-    return antrasDidziausias;
+    return antrasDidziausias || didziausias; 
 }
 
 

@@ -42,7 +42,7 @@ console.log(atsDaugyba);
 
 //arrow function priskyrimas kintamajam
 // jei logika turi tik !!viena!! procedura, tai galima nerasyti {} ir return;
-const dalyba = (a, b)  => a/b;
+const dalyba = (a, b) => a/b;
 
 const atsDalyba = dalyba(8, 5);
 console.log(atsDalyba);
@@ -64,6 +64,6 @@ console.log('------------');
 
 const vardas = 'Vardenis';
 
-const pirmaRaide = name => name[0];
+const pirmaRaide = name => name[0]; 
 const raide = pirmaRaide(vardas)
 console.log(raide);
