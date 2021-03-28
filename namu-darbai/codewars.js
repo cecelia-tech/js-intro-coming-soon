@@ -504,22 +504,22 @@ function noBoringZeros(n) {
   
 const string = n.toString();
  let ans = [];
-for (let i = string.length; i >0 ; i--) {
-  /* if (n[i] === 0) {
-    continue;} else */ if (string[i] === '0') {
-      //console.log(string[i]);
+for (let i = string.length-1; i >=0 ; i--) {
+  //console.log(string[i]);
+ if (string[i] !== '0') {
+      
       ans.push(string[i]);
     }
 }
 if (string.length = 1) {
   return n;
 }
-return string;
+return ans;
 }
-
-console.log(noBoringZeros(1450), '=>', 145);
-console.log(noBoringZeros(960000), '=>', 96);
-console.log(noBoringZeros(1050),'=>',  105);
-console.log(noBoringZeros(-1050),'=>',  -105);
-console.log(noBoringZeros(-105),'=>',  -105);
 console.log(noBoringZeros(0), '=>', 0);
+console.log(noBoringZeros(-105),'=>',  -105);
+console.log(noBoringZeros(1050),'=>',  105);
+
+//console.log(noBoringZeros(1450), '=>', 145);
+//console.log(noBoringZeros(960000), '=>', 96);
+//console.log(noBoringZeros(-1050),'=>',  -105);

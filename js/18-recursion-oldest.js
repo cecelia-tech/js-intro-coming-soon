@@ -1,8 +1,26 @@
 /*
 Gimines medyje reikia rasti kas buvo/yra vyriausias?
 */
+function oldest(asmuo) {
+    let biggestAge = asmuo.age;
+    let childAge = 0;
 
-function numberCount(asmuo) {
+    if (asmuo.children) {
+        for (let i = 0; i < asmuo.children.length; i++) {
+            const child = asmuo.children[i];
+
+            childAge = oldest(child);
+
+            if (childAge > biggestAge) {
+                biggestAge = childAge;
+            }
+        }
+    }
+
+    return biggestAge;
+}
+
+/* function numberCount(asmuo) {
     let nariuKiekis = 1;
 
     if (asmuo.children) {
@@ -14,7 +32,7 @@ function numberCount(asmuo) {
     }
 
     return nariuKiekis;
-}
+} */
 
 function oldestWithName(asmuo) {
     let oldestName = asmuo.name;
@@ -45,7 +63,7 @@ const gimine1 = {
     children: [
         {
             name: 'Maryte',
-            age: 45,
+            age: 300,
             children: [
                 {
                     name: 'Onute',
@@ -73,15 +91,17 @@ const gimine1 = {
                 },
                 {
                     name: 'Gabriele',
-                    age: 80
+                    age: 400
                 },
             ]
         },
     ]
 }
+const vyriausias = oldest(gimine1);
+console.log(vyriausias);
 
-const kieknariu = numberCount(gimine1);
-console.log(kieknariu);
+/* const kieknariu = numberCount(gimine1);
+console.log(kieknariu); */
 
 /* const vyriausiasAsmuo = oldestWithName(gimine1);
 console.log(vyriausiasAsmuo); */
